@@ -5,6 +5,7 @@ services:
     plan: free
     region: oregon
     repo: https://github.com/RaafetDev/localtunnel-server
+    branch: master
     buildCommand: npm install
     startCommand: node bin/server --port $PORT
     envVars:
