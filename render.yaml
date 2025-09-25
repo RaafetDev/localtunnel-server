@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: localtunnel-server
+    env: node
+    plan: free
+    region: oregon
+    repo: https://github.com/<your-username>/server
+    branch: main
+    buildCommand: npm install
+    startCommand: node bin/server --port $PORT
+    envVars:
+      - key: NODE_ENV
+        value: production
